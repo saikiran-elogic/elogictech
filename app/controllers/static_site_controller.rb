@@ -1,4 +1,5 @@
 class StaticSiteController < ApplicationController
+  
   def home
   end
 

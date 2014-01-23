@@ -58,5 +58,10 @@ module Elogictech
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+        # assets pipeline config to work on Heroku
+    config.assets.initialize_on_precompile = false
+
+    # add active admin assets to precompile list, loaded from vendor/assets
+    config.assets.precompile += %w( active_admin.js active_admin.css.scss )
   end
 end

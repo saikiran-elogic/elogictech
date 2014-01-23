@@ -11,9 +11,9 @@ Elogictech::Application.routes.draw do
 
 
   get "static_site/home"
-
+  match 'home' => 'static_site#home'
   get "static_site/about"
-
+  match 'about' => 'static_site#about'
   get "static_site/contact"
 
   resources :teams
