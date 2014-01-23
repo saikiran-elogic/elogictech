@@ -1,4 +1,7 @@
 Elogictech::Application.routes.draw do
+  resources :users
+
+
   root to: 'static_site#home'
 
   resources :casestudies
