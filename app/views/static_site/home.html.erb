@@ -31,52 +31,56 @@
   <div class="small-7 large-4 columns">
      <h1> About us </h1>
      <hr>
+     <%= render "static_site/about" %>
+     <hr>
+     <div class="row">
+        <% a = Service.limit(6) %>
+        <% a.each do |service| %>
+          <div class="text-center">
+            <div class="img small-2">
+             <%= image_tag service.photo1.url %>
+            </div>
+         
+            <%= service.name %> 
+         </div>
+        <% end %>
+      </div>
   </div>
   
   <div class="small-5 large-4 columns">
     <!-- Achievements slider -->
-      <ul class="example-orbit-content"             data-orbit>
-          <li data-orbit-slide="headline-1">
-            <div>
-              <h2>Headline 1</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
-          <li data-orbit-slide="headline-2">
-            <div>
-              <h2>Headline 2</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
-          <li data-orbit-slide="headline-3">
-            <div>
-              <h2>Headline 3</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
-      </ul>
+                 <!-- Awards slider -->
+            <ul class="example-orbit-content"             data-orbit>
+              <% a = Service.limit(6) %>
+              <% a.each do |service| %>
+              <li data-orbit-slide="headline-1">
+                <div class="img small-2">
+                 <%= image_tag service.photo1.url %>
+                </div>
+             
+                <%= service.name %> 
+               </li>
+
+              <% end %>
+                 
+            </ul>
+    <!-- Awards slider -->
     <!-- Achievements slider -->
     <hr>
     <!-- Awards slider -->
       <ul class="example-orbit-content"             data-orbit>
-          <li data-orbit-slide="headline-1">
-            <div>
-              <h2>Headline 1</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
-          <li data-orbit-slide="headline-2">
-            <div>
-              <h2>Headline 2</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
-          <li data-orbit-slide="headline-3">
-            <div>
-              <h2>Headline 3</h2>
-              <h3>Subheadline</h3>
-            </div>
-          </li>
+        <% a = Service.limit(6) %>
+        <% a.each do |service| %>
+        <li data-orbit-slide="headline-1">
+          <div class="img small-2">
+           <%= image_tag service.photo1.url %>
+          </div>
+       
+          <%= service.name %> 
+         </li>
+
+        <% end %>
+           
       </ul>
     <!-- Awards slider -->
     <hr>
@@ -129,9 +133,40 @@
       </div>
 
       <div class="row">
-        <div class="small-4 large-4 columns left">...</div>
-        <div class="small-4 large-4 columns text-center">...</div>
-        <div class="small-4 large-4 columns text-right">...</div>
+        <div class="small-4 large-4 columns left">
+
+          <ul class="vcard">
+            <li class="fn">Gaius Baltar</li>
+            <li class="street-address">123 Colonial Ave.</li>
+            <li class="locality">Caprica City</li>
+            <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+            <li class="email"><a href="#">g.baltar@cmail.com</a></li>
+          </ul>
+
+        </div>
+
+        <div class="small-4 large-4 columns text-center">
+          <img class="img" src="/assets/rails.png"> 
+        </div>
+        <div class="small-4 large-4 columns text-right">
+              <!-- Awards slider -->
+            <ul class="example-orbit-content"             data-orbit>
+              <% a = Service.limit(6) %>
+              <% a.each do |service| %>
+              <li data-orbit-slide="headline-1">
+                <div class="img small-2">
+                 <%= image_tag service.photo1.url %>
+                </div>
+             
+                <%= service.name %> 
+               </li>
+
+              <% end %>
+                 
+            </ul>
+    <!-- Awards slider -->
+
+        </div>
       </div>
 
 

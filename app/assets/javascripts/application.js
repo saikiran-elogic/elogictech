@@ -12,7 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require foundation
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+$(document).ready(function(){
+  if ( $('#ckeditor').length ) 
+    CKEDITOR.replace( 'ckeditor' );
+  if ( $('#ckeditor').prev('label').length ) 
+    $('#ckeditor').prev('label').css('float','none');
+});
+
+$('.ckeditor').ckeditor({
+  // optional config
+});

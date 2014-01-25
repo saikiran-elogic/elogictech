@@ -7,4 +7,8 @@ class StaticSiteController < ApplicationController
 
   def contact
   end
+
+  def location
+    @lat_lng = cookies[:lat_lng].split("|")
+  end
 end
